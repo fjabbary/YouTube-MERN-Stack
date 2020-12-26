@@ -4,8 +4,8 @@ import './styles/Comments.scss'
 class Comments extends Component {
     render() {
         return (
-            <div>
-                Comments Components
+            <div className="comments">
+
             </div>
         );
     }
