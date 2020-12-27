@@ -3,4 +3,5 @@ body {
     box-sizing: border-box; 
     font-family: 'Roboto', sans-serif;
     margin-bottom: 80px;
+    padding: 0;
 } 
