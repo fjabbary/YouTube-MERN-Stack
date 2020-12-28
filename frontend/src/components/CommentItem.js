@@ -3,6 +3,9 @@ import './styles/CommentItem.scss';
 
 class CommentItem extends Component {
     render() {
+
+        const { comment, id, likes, name, timestamp } = this.props.item
+
         return (
             <div className="commentItem">
                 <div className="commentItem__left">
@@ -10,8 +13,8 @@ class CommentItem extends Component {
                 </div>
 
                 <div className="commentItem__middle">
-                    <p> <span className="commentItem__middle--name">John Doe</span> <span className="commentItem__middle--date">737 days ago</span> </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam asperiores eius nesciunt natus saepe perspiciatis a error impedit soluta, quae molestias ea delectus libero ipsa velit cumque minima voluptatibus?</p>
+                    <p> <span className="commentItem__middle--name">{name}</span> <span className="commentItem__middle--date">{timestamp}</span> </p>
+                    <p>{comment}</p>
                 </div>
 
                 <div className="commentItem__right">
