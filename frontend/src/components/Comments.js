@@ -8,14 +8,16 @@ class Comments extends Component {
             <div className="comments">
                 <p><b><span className="comments__count">3</span> Comment</b></p>
                 <div className="comments__input">
-                    <img src="./assets/Images/Mohan-muruge.jpg" alt="" className="comments__input--avatar" />
-                    <input type="text" className="comments__input--input" />
-                    <button className="comments__input--btn">COMMENT</button>
+
+                    <form>
+                        <img src="./assets/Images/Mohan-muruge.jpg" alt="" className="comments__input--avatar" />
+                        <input type="text" className="comments__input--input" />
+                        <button className="comments__input--btn">COMMENT</button>
+                    </form>
                 </div>
 
                 <CommentItem />
-                <CommentItem />
-                <CommentItem />
+
 
             </div>
         );

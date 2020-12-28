@@ -13,8 +13,8 @@ class VideoDescription extends Component {
                         <span>737 days ago</span>
                     </div>
                     <div className="videoDescription__details--right">
-                        <img src="./assets/Icons/SVG/Icon-views.svg" /><span className="videoDescription__details--rightViews">1,000,231</span>
-                        <img src="./assets/Icons/SVG/Icon-likes.svg" /><span>1,000</span>
+                        <img src="./assets/Icons/SVG/Icon-views.svg" alt="views" /><span className="videoDescription__details--rightViews" >1,000,231</span>
+                        <img src="./assets/Icons/SVG/Icon-likes.svg" alt="like" /><span>1,000</span>
                     </div>
                 </div>
 

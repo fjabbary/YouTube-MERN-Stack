@@ -1,15 +1,33 @@
-import React from 'react'
 import VideoPlayer from './VideoPlayer'
-import Header from './Header'
 import Content from './Content'
+import React, { Component } from 'react';
+import axios from 'axios'
 
-export default function Main() {
-    return (
-        <div>
+class Main extends Component {
 
-            <VideoPlayer />
-            <Content />
+    state = {
+        oneVideo: {}
+    }
 
-        </div>
-    )
+    componentDidUpdate() {
+        const id = this.props.match.params.id
+
+        axios.get(`http://localhost:8080/videos/${id}`)
+            .then(res => {
+                this.setState({
+                    oneVideo: res.data
+                })
+            })
+    }
+
+    render() {
+        return (
+            <div>
+                <VideoPlayer />
+                <Content />
+            </div>
+        );
+    }
 }
+
+export default Main;

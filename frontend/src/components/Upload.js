@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './styles/Upload.scss'
+import './styles/Upload.scss';
+import { Link } from 'react-router-dom'
 
 class Upload extends Component {
     render() {
@@ -9,7 +10,7 @@ class Upload extends Component {
 
                 <div className="upload__video">
                     <div className="upload__video--left">
-                        <img src="./assets/Images/video-list-1.jpg" width="100%" />
+                        <img src="./assets/Images/video-list-1.jpg" width="100%" alt="upload-img" />
                     </div>
                     <div className="upload__video--right">
                         <form>
@@ -24,7 +25,7 @@ class Upload extends Component {
 
 
                             <button id="publish">Publish</button>
-                            <button id="cancel">Cancel</button>
+                            <Link to="/"><button id="cancel">Cancel</button></Link>
                         </form>
                     </div>
                 </div>

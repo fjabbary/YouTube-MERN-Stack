@@ -14,6 +14,7 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Main} />
+          <Route path="/videos/:id" component={Main} />
           <Route path="/upload" component={Upload} />
         </Switch>
       </div>
