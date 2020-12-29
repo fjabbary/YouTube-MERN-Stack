@@ -3,6 +3,7 @@ const express = require('express'),
     app = express(),
     PORT = 8080,
     cors = require('cors');
+const { v4: uuidv4 } = require('uuid');
 
 app.use(cors())
 
@@ -28,7 +29,20 @@ app.get('/videos/:id', (req, res) => {
 })
 
 app.post('/video/add', (req, res) => {
-    res.json('add video')
+    videoList.push({ ...req.body, image: 'https://swordstoday.ie/wp-content/uploads/2020/12/1606847135_718_December-Global-Festivals-This-month-marks-the-worldwide-holiday-in.jpg', id: uuidv4() })
+
+})
+
+app.delete('/delete', (req, res) => {
+    const commentId = req.body.commentId
+    const videoId = req.body.videoId;
+
+    const foundVideo = videoDetails.find(item => item.id === videoId)
+
+    const foundCommentsIndex = foundVideo.comments.findIndex(item => item.id !== commentId)
+
+    foundVideo.comments.splice(foundCommentsIndex, 1)
+    res.json(foundVideo.comments)
 })
 
 app.listen(PORT, () => {

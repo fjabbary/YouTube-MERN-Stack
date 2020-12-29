@@ -3,12 +3,13 @@ import './styles/Comments.scss';
 import CommentItem from './CommentItem';
 
 class Comments extends Component {
+
     render() {
 
         const { comments } = this.props.oneVideo
         const passedComments = comments || []
 
-        const commentJSX = passedComments.map(item => <CommentItem key={item.id} item={item} />)
+        const commentJSX = passedComments.map(item => <CommentItem key={item.id} item={item} videoId={this.props.oneVideo.id} removeComment={this.props.removeComment} />)
 
 
         return (

@@ -13,7 +13,7 @@ class Content extends Component {
             <div className="content">
                 <div className="content__left">
                     <VideoDescription oneVideo={oneVideo} />
-                    <Comments oneVideo={oneVideo} />
+                    <Comments oneVideo={oneVideo} removeComment={this.props.removeComment} />
                 </div>
                 <div className="content__right">
                     <VideoList />
